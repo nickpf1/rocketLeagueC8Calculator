@@ -20,7 +20,7 @@
 				<td>{{y.name}}</td>
 				<td>{{y.oneXamount}}</td>
 				<td>{{1/y.oneXamount | number:4}}X</td>
-				<td><input type="number" ng-model="y.playerAmount" /></td>
+				<td><input type="number" min="0" ng-model="y.playerAmount" /></td>
 				<td>{{y.playerAmount * (1/y.oneXamount) | number:4}}X</td>
 			</tr>
 			<tr>
