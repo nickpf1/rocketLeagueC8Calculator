@@ -2,7 +2,7 @@ angular.module('myApp', []).controller('cratesCtrl', function($scope) {
   $scope.totalValue = function() {
     var total = 0;
     for (var i = 0; i < this.crates.length; i++) {
-      total += this.crates[i].playerAmount * (.1 / this.crates[i].amount4Point1);
+      total += this.crates[i].playerAmount * (1 / this.crates[i].oneXamount);
     }
     return total;
   };
@@ -15,52 +15,62 @@ angular.module('myApp', []).controller('cratesCtrl', function($scope) {
   };
   $scope.crates = [{
       name: 'Champion 4',
-      amount4Point1: 3,
+      oneXamount: 30,
       playerAmount: 0
     },
     {
-      name: '	Players Choice',
-      amount4Point1: 4,
+      name: 'Players Choice',
+      oneXamount: 40,
       playerAmount: 0
     },
     {
-      name: '	Nitro',
-      amount4Point1: 8,
+      name: 'Nitro',
+      oneXamount: 80,
       playerAmount: 0
     },
     {
-      name: '	Champion 1',
-      amount4Point1: 10,
+      name: 'Champion 1',
+      oneXamount: 100,
       playerAmount: 0
     },
     {
       name: 'Champion 3',
-      amount4Point1: 10,
+      oneXamount: 100,
       playerAmount: 0
     },
     {
-      name: '	Champion 2',
-      amount4Point1: 11,
+      name: 'Champion 2',
+      oneXamount: 110,
       playerAmount: 0
     },
     {
       name: 'Velocity Crate',
-      amount4Point1: 11,
+      oneXamount: 110,
       playerAmount: 0
     },
     {
       name: 'Accelerator',
-      amount4Point1: 13,
+      oneXamount: 130,
       playerAmount: 0
     },
     {
-      name: '	Turbo',
-      amount4Point1: 14,
+      name: 'Turbo',
+      oneXamount: 140,
       playerAmount: 0
     },
     {
-      name: '	Overdrive',
-      amount4Point1: 25,
+      name: 'Overdrive',
+      oneXamount: 250,
+      playerAmount: 0
+    },
+    {
+      name: 'Secret Santa',
+      oneXamount: 150,
+      playerAmount: 0
+    },
+    {
+      name: 'Haunted Hallows',
+      oneXamount: 350,
       playerAmount: 0
     }
   ];
