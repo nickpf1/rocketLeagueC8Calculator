@@ -72,6 +72,11 @@ angular.module('myApp', []).controller('cratesCtrl', function($scope) {
       name: 'Haunted Hallows',
       oneXamount: 350,
       playerAmount: 0
+    },
+    {
+      name: 'Victory Crate',
+      oneXamount: 2,
+      playerAmount: 0
     }
   ];
 });
