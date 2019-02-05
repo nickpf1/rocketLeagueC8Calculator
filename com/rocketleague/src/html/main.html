@@ -11,24 +11,24 @@
 		<table>
 			<tr>
 				<th>Crate</th>
-				<th>Crates for 1X</th>
+				<th>Keys</th>
 				<th>Value per Crate</th>
 				<th>Player Crates</th>
 				<th>Player Total</th>
 			</tr>
 			<tr ng-repeat="y in crates | orderBy:'oneXamount'">
 				<td>{{y.name}}</td>
-				<td>{{y.oneXamount}}</td>
-				<td>{{1/y.oneXamount | number:4}}X</td>
+				<td>{{y.keys}}</td>
+				<td>{{1/y.keys | number:1}}K</td>
 				<td><input type="number" min="0" ng-model="y.playerAmount" /></td>
-				<td>{{y.playerAmount * (1/y.oneXamount) | number:4}}X</td>
+				<td>{{y.playerAmount * (1/y.keys) | number:1}}K</td>
 			</tr>
 			<tr>
 				<td><b>Total</b></td>
 				<td/>
 				<td/>
 				<td>{{totalPlayerCrates()}}</td>
-				<td>{{totalValue() | number:4}}X</td>
+				<td>{{totalValue() | number:1}}K</td>
 			</tr>
 		</table>
 	</div>

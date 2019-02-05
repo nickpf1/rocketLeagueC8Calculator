@@ -2,7 +2,7 @@ angular.module('myApp', []).controller('cratesCtrl', function($scope) {
   $scope.totalValue = function() {
     var total = 0;
     for (var i = 0; i < this.crates.length; i++) {
-      total += this.crates[i].playerAmount * (1 / this.crates[i].oneXamount);
+      total += this.crates[i].playerAmount * (1 / this.crates[i].keys);
     }
     return total;
   };
@@ -13,69 +13,100 @@ angular.module('myApp', []).controller('cratesCtrl', function($scope) {
     }
     return total;
   };
-  $scope.crates = [{
-      name: 'Champion 4',
-      oneXamount: 30,
+  $scope.crates = [
+    {
+      name: 'Golden Egg',
+      keys: 2,
       playerAmount: 0
     },
     {
-      name: 'Players Choice',
-      oneXamount: 40,
+      name: 'Golden Pumkin',
+      keys: 2,
+      playerAmount: 0
+    },
+    {
+      name: 'Elevation',
+      keys: 30,
+      playerAmount: 0
+    },
+    {
+      name: 'Zephyr',
+      keys: 30,
+      playerAmount: 0
+    },
+    {
+      name: 'Impact',
+      keys: 30,
+      playerAmount: 0
+    },
+    {
+      name: 'Champion 4',
+      keys: 2,
+      playerAmount: 0
+    },
+    {
+      name: 'Player Choice',
+      keys: 11,
+      playerAmount: 0
+    },
+    {
+      name: 'Triumph',
+      keys: 12,
       playerAmount: 0
     },
     {
       name: 'Nitro',
-      oneXamount: 80,
+      keys: 10,
       playerAmount: 0
     },
     {
       name: 'Champion 1',
-      oneXamount: 100,
-      playerAmount: 0
-    },
-    {
-      name: 'Champion 3',
-      oneXamount: 100,
+      keys: 4,
       playerAmount: 0
     },
     {
       name: 'Champion 2',
-      oneXamount: 110,
+      keys: 4,
+      playerAmount: 0
+    },
+    {
+      name: 'Champion 3',
+      keys: 4,
       playerAmount: 0
     },
     {
       name: 'Velocity Crate',
-      oneXamount: 110,
+      keys: 16,
       playerAmount: 0
     },
     {
       name: 'Accelerator',
-      oneXamount: 130,
+      keys: 24,
       playerAmount: 0
     },
     {
       name: 'Turbo',
-      oneXamount: 140,
-      playerAmount: 0
-    },
-    {
-      name: 'Overdrive',
-      oneXamount: 250,
+      keys: 30,
       playerAmount: 0
     },
     {
       name: 'Secret Santa',
-      oneXamount: 150,
+      keys: 30,
+      playerAmount: 0
+    },
+    {
+      name: 'Overdrive',
+      keys: 30,
+      playerAmount: 0
+    },
+    {
+      name: 'Spring Fever',
+      keys: 30,
       playerAmount: 0
     },
     {
       name: 'Haunted Hallows',
-      oneXamount: 350,
-      playerAmount: 0
-    },
-    {
-      name: 'Victory Crate',
-      oneXamount: 2,
+      keys: 20,
       playerAmount: 0
     }
   ];
